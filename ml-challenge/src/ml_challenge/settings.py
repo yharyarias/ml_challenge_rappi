@@ -3,8 +3,9 @@ from the Kedro defaults. For further information, including these default values
 https://kedro.readthedocs.io/en/stable/kedro_project_setup/settings.html."""
 
 # Instantiated project hooks.
-# from ml_challenge.hooks import ProjectHooks
-# HOOKS = (ProjectHooks(),)
+from .hooks.mlflow_hook import ModelTrackingHooks
+
+HOOKS = (ModelTrackingHooks(),)
 
 # Installed plugins for which to disable hook auto-registration.
 # DISABLE_HOOKS_FOR_PLUGINS = ("kedro-viz",)
